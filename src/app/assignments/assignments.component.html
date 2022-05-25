@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+          <button (click)="onToggleDisplay()">Display details</button>
+          <p *ngIf="toggleDisplay">Secret Password = tuna</p>
+          <!-- <app-assignment *ngFor="let btt of btClickTimes" [ngModel]="btt"></app-assignment> -->
+          <div><ng-templates class="row" *ngFor="let btt of btClickTimes" [ngStyle]="{backgroundColor: btt >= 5 ? 'blue':'' }" [ngClass]="{online: btt >= 5 }">{{btt}}
+        </ng-templates></div>
+      </div>
+    </div>
+  </div>
