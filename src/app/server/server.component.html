@@ -1,0 +1,4 @@
+<label>Username</label>
+<input type="text" class="form-control" [(ngModel)]="username">
+<p>{{username}}</p>
+<button class="btn btn-primary" (click)="validateUsername($event)" [disabled]="isValid">Add User</button>
