@@ -4,7 +4,7 @@
           <button (click)="onToggleDisplay()">Display details</button>
           <p *ngIf="toggleDisplay">Secret Password = tuna</p>
           <!-- <app-assignment *ngFor="let btt of btClickTimes" [ngModel]="btt"></app-assignment> -->
-          <div><ng-templates class="row" *ngFor="let btt of btClickTimes" [ngStyle]="{backgroundColor: btt >= 5 ? 'blue':'' }" [ngClass]="{online: btt >= 5 }">{{btt}}
+          <div><ng-templates class="row" *ngFor="let btt of btClickTimes; let i = index" [ngStyle]="{backgroundColor: i >= 4 ? 'blue':'' }" [ngClass]="{online: i >= 4 }">{{btt}}
         </ng-templates></div>
       </div>
     </div>

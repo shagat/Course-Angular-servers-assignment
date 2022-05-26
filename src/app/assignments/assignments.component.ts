@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssignmentsComponent implements OnInit {
   toggleDisplay: boolean = false;
-  btClickTimes: Array<number> = [];
+  btClickTimes = [];
   btClick: number = 0;
 
   constructor() { }
@@ -17,9 +17,9 @@ export class AssignmentsComponent implements OnInit {
   onToggleDisplay(){
     this.btClick += 1;
     this.toggleDisplay = !this.toggleDisplay;
-    this.btClickTimes.push(this.btClick);
-    console.log(this.toggleDisplay);
-    console.log(this.btClick);
+    this.btClickTimes.push(new Date());
+    // console.log(this.toggleDisplay);
+    // console.log(this.btClick);
   }
   getColor(){
     if (this.btClick > 5  ){
