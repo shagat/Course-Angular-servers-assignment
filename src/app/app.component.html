@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <h3>I am in the AppComponent</h3>
@@ -6,5 +6,21 @@
       <app-servers></app-servers>
     </div>
     <app-assignments></app-assignments>
+  </div>
+</div> -->
+<div class="container">
+  <app-cockpit (serverCreated)="onServerAdded($event)" 
+  (bpCreated)="onBlueprintAdded($event)">
+  </app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element *ngFor=" let serverElement of serverElements" [srvElement]="serverElement">
+        <p #contentParagraph>
+          <strong *ngIf="serverElements.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
+          <em *ngIf="serverElements.type === 'blueprint'">{{ element.content }}</em>
+        </p>
+      </app-server-element>
+    </div>
   </div>
 </div>
