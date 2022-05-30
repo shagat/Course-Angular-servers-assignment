@@ -23,4 +23,12 @@
       </app-server-element>
     </div>
   </div>
+  <hr>
+  <p appHighlight = "yellowgreen" [defaultColor] = "'bisque'">Style me with your own directives!</p>
+  <div [ngSwitch]="value">
+    <p *ngSwitchCase="5">Value is 5</p>
+    <p *ngSwitchCase="10">Value is 10</p>
+    <p *ngSwitchCase="100">Value is 100</p>
+    <p *ngSwitchDefault="5">Value is Default</p>
+  </div>
 </div>

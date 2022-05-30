@@ -9,6 +9,8 @@ import { AssignmentsComponent } from './assignments/assignments.component';
 import { AssignmentComponent } from './assignment/assignment.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { HighlightDirective } from './highlight/highlight.directive';
+import { UnlessDirective } from './highlight/unless.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ServerElementComponent } from './server-element/server-element.componen
     AssignmentsComponent,
     AssignmentComponent,
     CockpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    HighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
