@@ -11,6 +11,11 @@ import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { HighlightDirective } from './highlight/highlight.directive';
 import { UnlessDirective } from './highlight/unless.directive';
+import { ServerPipeComponent } from './server-pipe/server-pipe.component';
+import { ShortenPipe } from './shorten.pipe';
+import { FilterPipe } from './filter.pipe';
+import { ReversePipe } from './reverse.pipe';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { UnlessDirective } from './highlight/unless.directive';
     CockpitComponent,
     ServerElementComponent,
     HighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    ServerPipeComponent,
+    ShortenPipe,
+    FilterPipe,
+    ReversePipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
